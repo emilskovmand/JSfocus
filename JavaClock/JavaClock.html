@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Clock</title>
+  <link rel="icon" href="https://cdn4.iconfinder.com/data/icons/proglyphs-business-and-office/512/Clock-512.png">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+
+  <div id="clock1" class="clock">
+    <div class="clock-face">
+      <!-- HOURS CLOCK -->
+      <h2 id="hours"></h2>
+      <div class="hand hour-hand"></div>
+    </div>
+  </div>
+  <div id="clock2" class="clock">
+    <div class="clock-face">
+      <!-- MINUTES CLOCK -->
+      <h2 id="minutes"></h2>
+      <div class="hand min-hand"></div>
+    </div>
+  </div>
+  <div id="clock3" class="clock">
+    <div class="clock-face">
+      <!-- SECONDS CLOCK -->
+      <h2 id="seconds"></h2>
+      <div class="hand second-hand"></div>
+    </div>
+  </div>
+
+
+  <style>
+    html {
+      background: #018DED url(http://unsplash.it/1500/1000?image=881&);
+      background-size: cover;
+      font-family: 'helvetica neue';
+      text-align: center;
+      font-size: 10px;
+    }
+
+    body {
+      margin: 0;
+      font-size: 2rem;
+      display: flex;
+      min-height: 100vh;
+      max-height: 100vh;
+      align-items: center;
+    }
+
+    .clock {
+      width: 33rem;
+      height: 33rem;
+      border: 20px solid white;
+      border-radius: 50%;
+      margin: 50px auto;
+      position: relative;
+      padding: 2rem;
+      box-shadow:
+        0 0 0 4px rgba(0, 0, 0, 0.1),
+        inset 0 0 0 3px #EFEFEF,
+        inset 0 0 10px black,
+        0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .clock-face {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transform: translateY(-3px);
+      text-align: center;
+      /* account for the height of the clock hands */
+    }
+
+    h2 {
+      display: inline-block;
+      color: white;
+      font-size: 112.5px;
+      opacity: 0.4;
+      font-family: 'Orbitron', sans-serif;
+    }
+
+    .hand {
+      width: 50%;
+      height: 6px;
+      background: black;
+      position: absolute;
+      top: 50%;
+      transform-origin: 100%;
+      transform: rotate(90deg);
+    /*  transition: 0.5s;  */
+      transition-timing-function: cubic-bezier(0.15, 2.54, 0.58, 1);
+    }
+  </style>
+
+  <script>
+    const secondHand = document.querySelector('.second-hand');
+    const minuteHand = document.querySelector('.min-hand');
+    const hoursHand = document.querySelector('.hour-hand');
+    const hands = document.querySelector('.hand');
+
+
+    function setDate() {
+      const now = new Date();
+
+      /* Sekund klokke */
+      const seconds = now.getSeconds();
+      const SecondstoDegrees = ((seconds / 60) * 360) + 90;
+      secondHand.style.transform = `rotate(${SecondstoDegrees}deg)`;
+
+      /* Minut Klokke */
+      const minutes = now.getMinutes();
+      const MinutestoDegrees = ((minutes / 60) * 360) + 90;
+      minuteHand.style.transform = `rotate(${MinutestoDegrees}deg)`;
+
+      /* Time Klokke */
+      const hours = now.getHours();
+      const HourstoDegrees = ((hours / 12) * 360) + 90;
+      hoursHand.style.transform = `rotate(${HourstoDegrees}deg)`;
+
+      /* Digital-watch */
+      document.getElementById('hours').innerHTML = hours;
+      document.getElementById('minutes').innerHTML = minutes;
+      document.getElementById('seconds').innerHTML = seconds;
+
+    }
+   setInterval(setDate, 1000) 
+  </script>
+</body>
+
+</html>

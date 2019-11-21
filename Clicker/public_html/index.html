@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" charset="utf-8">
+    <meta name="viewport" content="height=device-height, initial-scale=1" charset="utf-8">
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./Style/index.css">
+
+    <title>Smoothie Clicker</title>
+
+    <!-- 
+             Credits:
+             Programmer: Emil Skovmand
+             Artist: Christian Kirk Ludvigsen
+             Second Programmer: Henrik Nehm
+          -->
+
+    <link rel="icon" href="">
+</head>
+
+<body class="no-selectable">
+    <div class="bgcontainer">
+
+    </div>
+    <main>
+        <div class="reportContainer">
+            <div id="reporter">
+            </div>
+        </div>
+        <div class="menuContainer">
+            <div class="topBorder menuBorder">
+
+            </div>
+            <div class="sideBorder menuBorder">
+
+            </div>
+            <div class="bottomBorder menuBorder">
+
+            </div>
+            <div class="menuContent">
+                <div class="subMenuButtons">
+                    <div id="SmoUPS" class="menuButton currentMenu">
+                        <span>Smoothie</span>
+                    </div>
+                    <div id="DolUPS" class="menuButton">
+                        <span>Dollar</span>
+                    </div>
+                </div>
+                <div class="productsBox smoothieProducts">
+                    <div class="product">
+                        <img src="images/Products/smo/" alt="">
+                        <div class="productInfo">
+                            hej
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="menubutton">
+                <div class="burgerContainer">
+                    <div class="topLine line"></div>
+                    <div class="middleLine line"></div>
+                    <div class="bottomLine line"></div>
+                </div>
+            </div>
+
+            <div class="clickers">
+                <div class="grBorder">
+                </div>
+                <div class="smoothieContainer">
+                        <div class="ClickNum" style="top:30px;left:30px"> + ClickDollar + </div>
+                    <div class="infoPanel">
+                        <div class="SmoAmount">
+                            <span id="ALLSMO" class="count">0</span> <span class="SMOInfo">Smoothies</span>
+                        </div>
+                        <div class="SmoPS">
+                            <span id="CPSSMO" class="count">0</span> <span class="SMOInfo">Smoothies per second</span>
+                        </div>
+                    </div>
+                    <div class="smoothie">
+                        <img id="smoothie" class="CLICKER no-selectable" src="https://i.imgur.com/aFqeOhh.png" alt="">
+                    </div>
+
+                    <div class="waveContainer">
+                        <span class="wave"></span>
+                        <span class="waveSolid"></span>
+                    </div>
+                </div>
+                <div class="grBorder"></div>
+                <div class="dollarContainer">
+                    <div class="infoPanel">
+                        <div class="dollarAmount">
+                            <span id="ALLDOL" class="count">0</span> <span class="DOLInfo">Dollar</span>
+                        </div>
+                        <div class="DollarPS">
+                            <span id="CPSDOL" class="count">0</span> <span class="DOLInfo">Dollar per second</span>
+                        </div>
+                    </div>
+                    <div class="dollar">
+                        <img id="dollar" class="CLICKER no-selectable" src="https://i.imgur.com/ENsqnOo.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./scripts/main.js"></script>
+</body>
+
+</html>

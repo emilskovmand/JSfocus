@@ -1,0 +1,144 @@
+$infoMargin: 2.3rem;
+
+
+.clickers {
+    display: flex;
+    width: 79.7%;
+    height: 100%;
+    margin-left: 20.3%;
+
+    .grBorder {
+        width: 1.6%;
+        background-image: url(../images/sugerør.png);
+    }
+}
+.smoothieContainer {
+    position: relative;
+    flex: 3;
+    .smoothie {
+        position: absolute;
+        top: 28%;
+        left: 52.5%;
+        transform: translate(-50%, 0%);
+        height: 90%;
+        width: auto;
+        img {
+            height: 50%;
+            max-height: 100%;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.12,1.12);
+            }
+        }
+
+    }
+    .infoPanel {
+        border-top: .5px inset $black;
+        border-bottom: .5px inset $black;
+        margin-top: $infoMargin;
+        height: 14%;
+        background-color: $JB1;
+        background-image: linear-gradient(to bottom, $JB1, $JB2, $JB2, $JB1);
+        .SmoAmount {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            margin-left: 7%;
+            span {
+                font-family: $infoPanelFONT;
+                color: $color3;
+                font-size: 2rem;
+            }
+            .SMOInfo {
+                font-size: 1.7rem;
+                letter-spacing: 1.3px;
+                margin-left: 2%;
+            }
+        }
+        .SmoPS {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            margin-left: 7%;
+            span {
+                top: 50%;
+                font-family: $infoPanelFONT;
+                color: $color3;
+                font-size: 2rem;
+            }
+            .SMOInfo {
+                font-size: 1.7rem;
+                letter-spacing: 1.3px;
+                margin-left: 2%;
+            }
+        }
+    }
+}
+
+.dollarContainer {
+    position: relative;
+    flex: 2;
+    .dollar {
+        position: absolute;
+        top: 41%;
+        left: 52.5%;
+        transform: translate(-50%, 0);
+        height: 52%;
+        width: auto;
+        img {
+            height: 50%;
+            max-height: 100%;
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.164,1.164);
+            }
+        }
+    }
+    .infoPanel {
+        border-top: .5px inset $black;
+        border-bottom: .5px inset $black;
+        margin-top: $infoMargin;
+        height: 14%;
+        background-color: $JB1;
+        background-image: linear-gradient(to bottom, $JB1, $JB2, $JB2, $JB1);
+        .dollarAmount {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            margin-left: 7%;
+            span {
+                font-family: $infoPanelFONT;
+                color: $color3;
+                font-size: 2rem;
+            }            
+            .DOLInfo {
+                font-size: 1.7rem;
+                letter-spacing: 1.3px;
+                margin-left: 2%;
+            }
+        }
+        .DollarPS {
+            position: relative;
+            width: 100%;
+            height: 50%;
+            margin-left: 7%;
+            span {
+                top: 50%;
+                font-family: $infoPanelFONT;
+                color: $color3;
+                font-size: 2rem;
+            }
+            .DOLInfo {
+                font-size: 1.7rem;
+                letter-spacing: 1.3px;
+                margin-left: 2%;
+            }
+        }
+    }
+}
+
+.ClickNum {
+    position: absolute;
+    z-index: 60;
+    pointer-events: none;
+}

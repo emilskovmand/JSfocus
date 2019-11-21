@@ -1,0 +1,14 @@
+@font-face {
+    font-family: 'Timotheos';
+    src: url(../fonts/Timoteo.ttf) format("truetype");
+}
+@font-face {
+    font-family: 'Bilbo';
+    src: url(../fonts/Bilbo-Regular.otf) format("opentype");
+}
+@font-face {
+    font-family: 'Futura light';
+    src: url(../fonts/FuturaLightRegular.otf) format("opentype");
+}
+$infoPanelFONT: 'Bilbo', 'Timotheos';
+$reportFONT: 'Futura light', sans-serif;

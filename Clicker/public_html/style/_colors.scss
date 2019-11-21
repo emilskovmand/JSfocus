@@ -1,0 +1,25 @@
+$color1: #ffefef;
+$color2: #ffe2e2;
+$color3: #ffe3c6;
+$color4: #ffeac2;
+$color5: #ffefdc;
+$black: #111111;
+$lightblack: #2a2525c7;
+
+$JB1: #a53e45;
+$JB2: #c83f49;
+
+$menuBorderwidth: 2%;
+$menuBordercolor: $color2;
+
+@mixin disable-selection {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+.no-selectable {
+    @include disable-selection;
+}

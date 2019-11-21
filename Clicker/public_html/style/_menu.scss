@@ -1,0 +1,155 @@
+.menubutton {
+    height: auto;
+    width: auto;
+    .burgerContainer {
+        position: absolute;
+        z-index: 7;
+        height: auto;
+        width: 38px;
+        margin-top: 1.4%;
+        margin-left: 1.4%;
+        padding: 1.7px 1.7px;
+        cursor: pointer;
+        .topLine {
+            transform-origin: left;
+            width: 100%;
+            transition: transform .3s linear;
+        }
+        .middleLine {
+            width: 100%;
+            margin-top: 4px;
+            margin-bottom: 4px;
+        }
+        .bottomLine {
+            width: 100%;
+            transform-origin: left;
+        }
+        &>* {
+            height: 4px;
+            background-color: $JB1;
+        }
+        &:hover div.line {
+            background-color: $JB2;
+        }
+    }
+}
+
+.menuContainer {
+    position: absolute;
+    z-index: 4;
+    width: 20%;
+    height: 85.5%;
+    margin-top: 5%;
+    margin-bottom: 6%;
+    transform: translateX(-102%);
+    background-color: $JB2;
+    &::after {
+        position: relative;
+    }
+    .topBorder {
+        height: $menuBorderwidth;
+        width: 100%;
+        top: 0;
+    }
+    .sideBorder {
+        right: 0;
+        height: 100%;
+        width: 3.5%;
+    }
+    .bottomBorder {
+        bottom: 0;
+        width: 100%;
+        height: $menuBorderwidth;
+    }
+    .menuBorder {
+        position: absolute;
+        background-color: $menuBordercolor;
+    }
+    .menuContent {
+        margin-top: 3.8%;
+        margin-right: $menuBorderwidth;
+        margin-bottom: $menuBorderwidth;
+        height: 96%;
+        width: 96.5%;
+        .subMenuButtons {
+            display: flex;
+            height: 7%;
+            border-bottom: .3px inset #6219192d;
+            .menuButton {
+                flex: 1;
+                text-align: center;
+                font-family: $infoPanelFONT;
+                font-size: 1.223rem;
+                opacity: .55;
+                letter-spacing: 1.6px;
+                &#DolUPS {
+                    border-left: .3px inset #6219192d;
+                    &:hover {
+                        background-color: transparent;
+                        background-image: radial-gradient(circle at top right, #ffffff5e, transparent, transparent, transparent, transparent);
+                        opacity: 1;
+                    }
+                    &.currentMenu {
+                        background-image: radial-gradient(circle at top right, #ffffff5e, transparent, transparent, transparent, transparent);
+                        opacity: 1;
+                    }
+                }
+                &#SmoUPS {
+                    &:hover {
+                        background-color: transparent;
+                        background-image: radial-gradient(circle at top left, #ffffff5e, transparent, transparent, transparent, transparent);
+                        opacity: 1;
+                    }
+                    &.currentMenu {
+                        background-color: transparent;
+                        background-image: radial-gradient(circle at top left, #ffffff5e, transparent, transparent, transparent, transparent);
+                        opacity: 1;
+                    }
+                }
+                span {
+                    line-height: 2em;
+                    padding-bottom: 5px;
+                    margin-right: 2px;
+                }
+                &:hover {
+                    cursor: pointer;
+                    text-decoration-line: underline;
+                }
+            }
+        }
+    }
+}
+
+.menuContainer.showMenu {
+    transition: transform .6s ease-out;
+    transform: translateX(0%) !important;
+}
+
+.menuContainer.hideMenu {
+    transition: transform .8s ease-in-out;
+    transform: translateX(-140%);
+}
+
+.productsBox {
+    border-top: 3px inset #6219192d;;
+    height: 94%;
+    width: 100%;
+    .product {
+        display: flex;
+        width: 100%;
+        height: 13%;
+        border-bottom: .3px inset #6219192d;
+        img {
+            flex: 4;
+        }
+        .productInfo {
+            flex: 9;
+        }
+    }
+    &.smoothieProducts {
+        display: block;
+    }
+    &.dollarProducts {
+        display: none;
+    }
+}

@@ -1,0 +1,30 @@
+Visuelle
+(
+    Lav en fed menu der kommer ind med JavaScript
+    Oppe i venstre eller højre hjørne
+    Godt billede af en smoothie i midten af skærmen der har en dynamisk effekt når man hover over eller trykker på den
+    En tæller, der tæller hvor mange smoothies man har
+    Smoothies per sekund lige under
+    Baggrund der dynamisk bevæger sig som en bølge i bunden, bølgen skal være højere på websiden desto flere smoothies man har.
+    Pink/Lyserød smoothie
+)
+Script 
+(
+    HUSK AT SKRIVE KOMMENTARER
+    Smoothie counter
+    Sælg smoothie for dollars
+    Dollars kan købe upgrades, "smoothie-makers" 
+    Achievements: Kom med ideer: (
+        Når man rammer 10, 100, 1000, 10000, 100000, 1 million smoothies
+        Når man rammer 10, 100, 1000, 10000, 100000, 1 million dollar
+        Hvis man kan klikke med 15 cps
+        Første gang man åbner købemenuen
+        Købe sin første ting i købemenuen
+        Når smoothie-bølgen ikke kan komme højere Oppe
+        Når man har klikket 100 gange, 1.000 gange, 10.000 gange, 100.000 gange, 1.000.000 gange
+        HVIS MAN CHEATER(Skriver i console)
+
+    )
+    Man skal både kunne købe sælgere på forskellige tiers og smoothie-makers på forskellige tiers
+    Man skal kunne gemme sin progress (Læs om LocalStorage i JavaScript)
+)   
